@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Requirements for Athletic Training Analytics</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        .critical-section {
+            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+            border-left: 6px solid #28a745;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.1);
+        }
+        .helpful-section {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 6px solid #ffc107;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.1);
+        }
+        .goal-section {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 6px solid #2196f3;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.1);
+        }
+        ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        .why-note {
+            color: #6c757d;
+            font-style: italic;
+            display: block;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(108, 117, 125, 0.1);
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+        .divider {
+            height: 3px;
+            background: linear-gradient(to right, #3498db, #e74c3c, #f39c12);
+            margin: 40px 0;
+            border-radius: 2px;
+        }
+        .emoji {
+            font-size: 1.3em;
+            margin-right: 8px;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .priority-badge {
+            background: #dc3545;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .helpful-badge {
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Data Requirements for Athletic Training Analytics</h1>
+            <p class="subtitle">Improving Injury Prediction and Recovery Time Models</p>
+        </div>
+
+        <div class="critical-section">
+            <div class="section-title">
+                <h2><span class="emoji">✅</span>CRITICAL</h2>
+                <span class="priority-badge">MUST HAVE</span>
+            </div>
+            <p><em>Need These to Make Better Predictions</em></p>
+
+            <h3>1. Historical Injury Records</h3>
+            <ul>
+                <li><strong>Past 2-3 years of injury data</strong> (any format you have)</li>
+                <li><strong>Include serious injuries</strong> (surgeries, fractures, long recoveries)</li>
+                <li><strong>Actual return dates</strong> (to improve recovery time predictions, if they were recorded)</li>
+            </ul>
+
+            <h3>2. Basic Athlete Information</h3>
+            <ul>
+                <li><strong>Sport and position</strong> (from team rosters)</li>
+                <li><strong>Age, height, weight</strong> (standard athlete data)</li>
+                <li><strong>Previous injury history</strong> (you already track this)</li>
+            </ul>
+            <div class="why-note">
+                <strong>Why:</strong> Different sports/positions have different injury and recovery patterns
+            </div>
+
+            <h3>3. Training Context</h3>
+            <ul>
+                <li><strong>Practice vs. game injuries</strong> (simple classification)</li>
+                <li><strong>Season timing</strong> (pre-season, in-season, off-season)</li>
+                <li><strong>Playing time</strong> (exposure differences)</li>
+            </ul>
+            <div class="why-note">
+                <strong>Why:</strong> Helps predict when injuries are most likely
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="helpful-section">
+            <div class="section-title">
+                <h2><span class="emoji">🎯</span>HELPFUL</h2>
+                <span class="helpful-badge">IF AVAILABLE</span>
+            </div>
+            <p><em>If You Have Access</em></p>
+
+            <h3>4. Athlete Wearable Data</h3>
+            <ul>
+                <li><strong>Heart rate/GPS data/Training load metrics</strong> (weekly mileage, Force Plate Readings, HR Data)</li>
+            </ul>
+            <div class="why-note">
+                <strong>Why:</strong> Early warning signs of overtraining/fatigue
+            </div>
+
+            <h3>5. Coach Observations</h3>
+            <ul>
+                <li><strong>Training intensity levels</strong> (1-10 scale per week)</li>
+                <li><strong>Athlete fatigue notes</strong> ("looked tired in practice")</li>
+                <li><strong>Environmental factors</strong> (hot weather, poor field conditions)</li>
+            </ul>
+            <div class="why-note">
+                <strong>Why:</strong> Context for why injuries happened
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="goal-section">
+            <h2 style="color: #2196f3; margin-top: 0;">🎯 Project Goal</h2>
+            <p>The goal of this model will be a simple tool for Players, Trainers, and Coaches to use to make informed predictions and decisions regarding players safely returning from injury.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #e9ecef; color: #6c757d; font-size: 0.9em;">
+            <p><strong>Athletic Training Analytics System</strong> | Data Requirements Document</p>
+            <p>Generated: January 2025</p>
+        </div>
+    </div>
+</body>
+</html>
