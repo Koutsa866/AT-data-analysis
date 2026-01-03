@@ -1,4 +1,4 @@
-# Data files
+# Data files - CRITICAL: Exclude all data files to protect privacy
 *.xlsx
 *.xls
 *.csv
@@ -22,13 +22,16 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # Virtual environments
 venv/
 env/
+.venv
 ENV/
 env.bak/
 venv.bak/
@@ -49,6 +52,14 @@ Thumbs.db
 # Logs
 *.log
 
-# Personal data paths
+# Personal data paths - CRITICAL: Exclude data directories
 Data/
 PDF_Documentation/
+
+# Testing
+.pytest_cache/
+.coverage
+.tox/
+
+# Jupyter
+.ipynb_checkpoints
