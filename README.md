@@ -4,7 +4,7 @@ Comprehensive athletic training analytics system with injury recovery prediction
 
 ## System Overview
 
-### 🏅 Core Capabilities
+###  Core Capabilities
 - **Traditional Injury Tracking** - Clinical injury and treatment records
 - **Time Series Monitoring** - Longitudinal athlete performance tracking
 - **Personalized Analytics** - Individual ML models per athlete
@@ -12,7 +12,7 @@ Comprehensive athletic training analytics system with injury recovery prediction
 - **GPS Tracking** - Movement analysis and load calculation
 - **Predictive Prevention** - Injury prediction before occurrence
 
-### 📊 Data Sources
+###  Data Sources
 - **Real Kaggle Data**: 1,000+ injury prediction records
 - **Time Series Data**: 100 athletes × 52 weeks (5,200+ records)
 - **Personalized Profiles**: Individual baselines and thresholds
